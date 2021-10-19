@@ -1,2 +1,2 @@
 # Projects
-Python Projects personal and educational
+Projects from personal and educational projects to show fundemental use of python
