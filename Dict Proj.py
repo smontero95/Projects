@@ -71,7 +71,7 @@ def readfile(df):
     df = df.drop(["Crop title", "Variety", "Unit"], axis=1)
 
 
-    #Groups values by crop and then groups by staes with a nested dictionary with one more dict assigning yeaer and value
+    #Groups values by crop and then groups by states with a nested dictionary with one more dict assigning yeaer and value
     d = df.groupby('Crop').apply(lambda a: dict(a.groupby('State').apply(lambda x: dict(zip(x['Year'], x['Value'])))))
     d = d.to_dict()
     #returns nested dict
